@@ -7,9 +7,9 @@ matrix:
       dist: xenial
       sudo: true
     - os: osx
-      language: generic
+      language: sh
     - os: windows
-      language: generic
+      language: sh
   
 install:
   - python --version
