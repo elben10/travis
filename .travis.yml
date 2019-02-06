@@ -1,4 +1,8 @@
 language: python
+
+env:
+  global:
+    - PYTHON3.7=3.7.2
 matrix:
   include:
     - python: 3.5
@@ -8,8 +12,10 @@ matrix:
       sudo: true
     - os: osx
       language: sh
-      env: PYENV_VERSION=3.6.1 PYENV_VERSION_STRING='Python 3.6.1'
-      before_install: bash scripts/osx.sh
+      env: PYTHON_VERSION
+      before_install: 
+        - bash scripts/osx.sh
+
   
 install:
   - python --version
@@ -17,8 +23,3 @@ install:
   
 script: 
   - python setup.py test
-  
-cache:
-  - pip
-  - directories:
-    - "${PYENV_CACHE_PATH:-$HOME/.pyenv_cache}"
