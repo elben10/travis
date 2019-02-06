@@ -5,7 +5,3 @@ git clone https://github.com/pyenv/pyenv.git ${PYENV_ROOT}
 pyenv init
 pyenv install ${PYTHON_VERSION}
 export PATH="${PYENV_ROOT}/versions/${PYTHON_VERSION}/bin:${PATH}"
-${PYENV_ROOT}/versions/${PYTHON_VERSION}/bin/python --version
-echo ${PATH}
-
-
