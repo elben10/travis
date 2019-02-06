@@ -6,40 +6,46 @@ env:
     - PYTHON37=3.7.2
 matrix:
   include:
-    - name: "Linux: Python3.6"
-      python: 3.6
+#     - name: "Linux: Python3.6"
+#       python: 3.6
       
-    - name: "Linux: Python3.7"
-      python: 3.7
-      dist: xenial
-      sudo: true
+#     - name: "Linux: Python3.7"
+#       python: 3.7
+#       dist: xenial
+#       sudo: true
       
-    - name: "Linux: Python3.8-dev"
-      python: 3.8-dev
-      dist: xenial
-      sudo: true
+#     - name: "Linux: Python3.8-dev"
+#       python: 3.8-dev
+#       dist: xenial
+#       sudo: true
       
-    - name: "OSX: Python3.6"
-      os: osx
+#     - name: "OSX: Python3.6"
+#       os: osx
+#       language: sh
+#       env: PYTHON_VERSION=${PYTHON36}
+#       before_install: 
+#         - source scripts/osx.sh
+        
+#     - name: "OSX: Python3.7"
+#       os: osx
+#       language: sh
+#       env: PYTHON_VERSION=${PYTHON37}
+#       before_install: 
+#         - source scripts/osx.sh
+        
+#     - name: "OSX: Python3.8-dev"
+#       os: osx
+#       language: sh
+#       env: PYTHON_VERSION="3.8-dev"
+#       before_install: 
+#         - source scripts/osx.sh
+
+    - name: "Windows: Python3.6"
+      os: windows
       language: sh
       env: PYTHON_VERSION=${PYTHON36}
       before_install: 
-        - source scripts/osx.sh
-        
-    - name: "OSX: Python3.7"
-      os: osx
-      language: sh
-      env: PYTHON_VERSION=${PYTHON37}
-      before_install: 
-        - source scripts/osx.sh
-        
-    - name: "OSX: Python3.8-dev"
-      os: osx
-      language: sh
-      env: PYTHON_VERSION="3.8-dev"
-      before_install: 
-        - source scripts/osx.sh
-
+        - source scripts/windows.sh
   
 install:
   - python --version
