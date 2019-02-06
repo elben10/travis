@@ -9,4 +9,5 @@ setup(
     description = 'Description of my package',
     packages = find_packages(),    
     install_requires = [],
+    test_requires=['pytest'],
 )
