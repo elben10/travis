@@ -6,6 +6,9 @@ matrix:
     - python: 3.7
       dist: xenial
       sudo: true
+    - os: osx
+      language: sh
+      before_install: bash scripts/osx.sh
   
 install:
   - python --version
