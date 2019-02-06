@@ -2,15 +2,25 @@ language: python
 
 env:
   global:
+    - PYTHON35=3.5.6
+    - PYTHON36=3.6.8
     - PYTHON37=3.7.2
 matrix:
   include:
-    - python: 3.5
-    - python: 3.6
-    - python: 3.7
+    - name: "Linux: Python3.5"
+      python: 3.5
+    - name: "Linux: Python3.6"
+      python: 3.6
+    - name: "Linux: Python3.7"
+      python: 3.7
       dist: xenial
       sudo: true
-    - os: osx
+    - name: "Linux: Python3.8-dev"
+      python: 3.8-dev
+      dist: xenial
+      sudo: true
+    - name: "OSX: Python3.7"
+      os: osx
       language: sh
       env: PYTHON_VERSION=${PYTHON37}
       before_install: 
@@ -18,6 +28,7 @@ matrix:
 
   
 install:
+  - echo ${PATH}
   - python --version
   - python setup.py install
   
