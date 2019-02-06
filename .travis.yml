@@ -57,7 +57,7 @@ matrix:
     - name: "Windows: Python3.8-dev"
       os: windows
       language: sh
-      env: PYTHON_VERSION="3.8.0-a1"
+      env: PYTHON_VERSION="3.8.0-a1 --pre"
       before_install: 
         - source scripts/windows.sh
   
