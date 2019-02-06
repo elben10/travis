@@ -8,18 +8,18 @@ def parse_requirements(requirements, ignore=('setuptools',)):
           requirements
         - this implementation has been taken from TailorDev/Watson's setup file
     """
-with open(requirements) as f:
-    packages = set()
-    for line in f:
-        line = line.strip()
-        if line.startswith(('#', '-r', '--')):
-            continue
-        if '#egg=' in line:
-            line = line.split('#egg=')[1]
-        pkg = line.strip()
-        if pkg not in ignore:
-            packages.add(pkg)
-    return list(packages)
+    with open(requirements) as f:
+        packages = set()
+        for line in f:
+            line = line.strip()
+            if line.startswith(('#', '-r', '--')):
+                continue
+            if '#egg=' in line:
+                line = line.split('#egg=')[1]
+            pkg = line.strip()
+            if pkg not in ignore:
+                packages.add(pkg)
+        return list(packages)
 
 setup(
     name = 'MyPackageName',
