@@ -28,10 +28,6 @@ matrix:
 
   
 install:
-  - env
-  - echo ${PATH}
-  - ls ${HOME}/.pyenv/bin
-  - which python
   - python --version
   - python setup.py install
   
