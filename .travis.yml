@@ -2,8 +2,9 @@ language: python
 
 env:
   global:
-    - PYTHON36=3.6.8
-    - PYTHON37=3.7.2
+    - PYTHON36="3.6.8"
+    - PYTHON37="3.7.2"
+    - PYTHON38="3.8-dev"
 matrix:
   include:
 #     - name: "Linux: Python3.6"
@@ -36,7 +37,7 @@ matrix:
 #     - name: "OSX: Python3.8-dev"
 #       os: osx
 #       language: sh
-#       env: PYTHON_VERSION="3.8-dev"
+#       env: PYTHON_VERSION=${PYTHON38}
 #       before_install: 
 #         - source scripts/osx.sh
 
@@ -57,7 +58,7 @@ matrix:
     - name: "Windows: Python3.8-dev"
       os: windows
       language: sh
-      env: PYTHON_VERSION="3.8.0-a1 --pre"
+      env: PYTHON_VERSION=${PYTHON38}
       before_install: 
         - source scripts/windows.sh
   
