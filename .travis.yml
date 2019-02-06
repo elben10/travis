@@ -2,7 +2,7 @@ language: python
 
 env:
   global:
-    - PYTHON3.7=3.7.2
+    - PYTHON37=3.7.2
 matrix:
   include:
     - python: 3.5
@@ -12,7 +12,7 @@ matrix:
       sudo: true
     - os: osx
       language: sh
-      env: PYTHON_VERSION
+      env: PYTHON_VERSION=${PYTHON37}
       before_install: 
         - bash scripts/osx.sh
 
