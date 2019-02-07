@@ -7,6 +7,8 @@ env:
 matrix:
   allow_failures:
     - name: "hejsa2"
+  include:
+    - name: "hejsa3"
     
 script: 
   - echo 2
