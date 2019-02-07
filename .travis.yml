@@ -41,26 +41,29 @@ matrix:
       env: PYTHON_VERSION=${PYTHON37}
       before_install: 
         - source scripts/windows.sh
+  allow_failures:
+  - php: 7.0
+    env: KEY=VALUE
         
   allow_failures:
-    - name: "Linux: Python3.8-dev"
-      python: 3.8-dev
-      dist: xenial
-      sudo: true
+  - name: "Linux: Python3.8-dev"
+    python: 3.8-dev
+    dist: xenial
+    sudo: true
       
-    - name: "OSX: Python3.8-dev"
-      os: osx
-      language: sh
-      env: PYTHON_VERSION=${PYTHON38}
-      before_install: 
-        - source scripts/osx.sh
+  - name: "OSX: Python3.8-dev"
+    os: osx
+    language: sh
+    env: PYTHON_VERSION=${PYTHON38}
+    before_install: 
+      - source scripts/osx.sh
         
-    - name: "Windows: Python3.8-dev"
-      os: windows
-      language: sh
-      env: PYTHON_VERSION=${PYTHON38}
-      before_install: 
-        - source scripts/windows.sh
+  - name: "Windows: Python3.8-dev"
+    os: windows
+    language: sh
+    env: PYTHON_VERSION=${PYTHON38}
+    before_install: 
+      - source scripts/windows.sh
         
 install:
   - python --version
