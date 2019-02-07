@@ -6,6 +6,9 @@ env:
     - PYTHON38="3.8-dev"
 matrix:
   include:
-  - script: echo 2
+  - name: "hejsa"
   allow_failures:
-  - script: echo 3
+    - name: "hejsa2"
+    
+script: 
+  - echo 2
