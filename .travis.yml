@@ -5,8 +5,6 @@ env:
     - PYTHON37="3.7.2"
     - PYTHON38="3.8-dev"
 matrix:
-  include:
-  - name: "hejsa"
   allow_failures:
     - name: "hejsa2"
     
