@@ -42,7 +42,7 @@ matrix:
       before_install: 
         - source scripts/windows.sh
         
-  allow_failure:
+  allow_failures:
     - name: "Linux: Python3.8-dev"
       python: 3.8-dev
       dist: xenial
